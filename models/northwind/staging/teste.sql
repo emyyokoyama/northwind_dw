@@ -1,0 +1,1 @@
+SELECT product_id FROM `lofty-fragment-327812.nortwind_etl.order_details` LIMIT 1000

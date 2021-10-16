@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: nortwind_etl # aqui você deve substituir pelo nome do dataset criado pelo Stitch/Kondado no bigquery
+    description: Essa é a fonte de dados do nosso ERP, criada através do Stitch
+    tables:
+      - name: products # se você usou kondado, é possível que aqui esteja escrito public_products
+        description: Essa é a tabela de produtos do ERP.
+
+      - name: employees
+        description: Essa é a tabela de funcionários do ERP.
+        
+      - name: customers
+        description: Essa é a tabela de clientes.
+        columns:
+          - name: customer_id
+            description: Id de cliente
+            tests:
+              - unique
+              - not_null
+
+      - name: suppliers
+
+      - name: shippers
+
+      - name: orders
+
+      - name: order_details
+
+      - name: categories
