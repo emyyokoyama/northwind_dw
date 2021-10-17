@@ -1,3 +1,5 @@
+{{ config( materialized='table') }}
+
 with selected as (
     select	
         supplier_id	

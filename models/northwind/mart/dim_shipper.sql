@@ -1,3 +1,5 @@
+{{ config( materialized='table') }}
+
 with selected as (
     select	
         id_transportador
